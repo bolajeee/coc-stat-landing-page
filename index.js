@@ -1,25 +1,27 @@
-let menu = document.getElementById('menu-icon')
-let navlist = document.getElementsByClassName('nav-list')
+let menu = document.getElementById("menu-icon");
+let navlist = document.getElementsByClassName("nav-listt");
 
-menu.addEventListener('click', () => {
-    menu.classList.toggle('bx-x');
-    
-    if(menu.classList.contains('bx-x')){
-        navlist.classList.add('open')
-    }else{
-        navlist.classList.remove('open');
-    }
-})
+menu.addEventListener("click", () => {
+  menu.classList.toggle("bx-x");
 
-const sr = ScrollReveal ({
-    distance:'85px',
-    duration: 2600,
-    delay: 450,
-    reset: true
+  console.log("fgfg");
+
+  if (menu.classList.contains("bx-x")) {
+    document.getElementById("ll").style.display = "flex";
+  } else {
+    document.getElementById("ll").style.display = "none";
+  }
 });
 
-sr.reveal('.hero-text',{delay:200, origin:'top'});
+const sr = ScrollReveal({
+  distance: "85px",
+  duration: 2600,
+  delay: 450,
+  reset: true,
+});
+
+sr.reveal(".hero-text", { delay: 200, origin: "top" });
 sr.reveal(".hero-img", { delay: 450, origin: "top" });
 sr.reveal(".icons", { delay: 500, origin: "left" });
-sr.reveal(".scroll-down", { delay: 500, origin: "bottom"});
+sr.reveal(".scroll-down", { delay: 500, origin: "bottom" });
 sr.reveal(".nav-list", { delay: 200, origin: "right" });
